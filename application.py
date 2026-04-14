@@ -8,7 +8,7 @@ def msg():
 @app.route('/freq',methods=["POST"])
 def freq():
     data = request.json.get("data")
-    if not data or "data" not in data:
+    if not data:
         return {'error':'Invalid input'},400
     frequ={}
     sdata = list(set(data))
